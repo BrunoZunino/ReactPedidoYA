@@ -21,6 +21,9 @@ class Login extends React.Component {
     console.log('pass: ', this.state.pass);
     return (
       <div class="main">
+        <div>
+          <img class="imagen" src={require('./images/picante.png')} />
+        </div>
         <div class="container">
           <div class="login">
               <form>
