@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './login.css';
+import ReactDOMServer from 'react-dom/server';
 
 class Login extends React.Component {
   constructor(props){
@@ -22,7 +23,7 @@ class Login extends React.Component {
     return (
       <div class="main">
         <div>
-          <img class="imagen" src={require('./images/picante.png')} />
+          <img class="imagen" src={require('../../images/picante.png')} />
         </div>
         <div class="container">
           <div class="login">
@@ -34,6 +35,9 @@ class Login extends React.Component {
                   <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control passInput" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
                 <button type="submit" class="btn btn-primary loginButton ">Log in</button>
+                <div>
+                  <button type="submit" class="btn btn-primary registerButton ">Sign up</button>
+                </div>
                 <div class="plusButtons">
                   <button type="submit" class="btn btn-primary facebookButton ">Facebook</button>
                   <button type="submit" class="btn btn-primary gmailButton ">Gmail</button>
