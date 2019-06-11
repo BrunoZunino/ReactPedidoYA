@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
-import Header from './components/header.js';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Login from './screens/Login/login.js';
+import Home from './screens/Home/home.js';
 
 function App() {
   return (
-    <Header/>
+    <Router>
+      <Route path="/login" component={Login} />
+      <Route path="/home" component={Home} />
+    </Router>
   );
 }
 

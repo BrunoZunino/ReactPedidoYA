@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './login.css';
 import ReactDOMServer from 'react-dom/server';
+import { Redirect } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props){
@@ -16,8 +17,11 @@ class Login extends React.Component {
     console.log('I was triggered during componentDidMount');
   }
 
-  render(){
+  goHome() {
     
+  }
+
+  render(){
     console.log('email: ', this.state.email);
     console.log('pass: ', this.state.pass);
     return (
@@ -34,7 +38,7 @@ class Login extends React.Component {
                   <div class="form-group passInput">
                   <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control passInput" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
-                <button type="submit" class="btn btn-primary loginButton ">Log in</button>
+                <button type="submit" class="btn btn-primary loginButton" onClick={this.goHome}>Log in</button>
                 <div>
                   <button type="submit" class="btn btn-primary registerButton ">Sign up</button>
                 </div>

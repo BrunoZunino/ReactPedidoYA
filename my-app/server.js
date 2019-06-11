@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public/index.html')));
+app.use(express.static(path.join(__dirname, 'build/index.html')));
 
-app.get('/login', (req,res) => {
-  res.send('<h1>Welcome!!</h1>');
+app.get('*', (req,res) => {
+  res.sendFile('C:/Users/Alumno/Desktop/ReactPedidoYa/my-app/build/index.html');
 });
 
 const port = process.env.PORT || 5000;
