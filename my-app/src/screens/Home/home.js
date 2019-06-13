@@ -11,7 +11,7 @@ class Home extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="background">
           <h1>Hello everybody!!</h1>
       </div>
     );

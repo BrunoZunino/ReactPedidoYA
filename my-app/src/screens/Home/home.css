@@ -1,3 +1,6 @@
-body{
-    
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../images/picante.png");
+    background-size: 100% 110%;
 }

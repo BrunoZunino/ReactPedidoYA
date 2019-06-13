@@ -1,11 +1,4 @@
 
-body{
-  width: 100%;
-  height: 100%;
-  background-image: url("../../images/fondo.png");
-  background-size: 100% 110%;
-}
- 
 .imagen{
   width: 475px;
   height: 200px;
@@ -21,6 +14,10 @@ body{
   text-align: center;
   align-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../images/fondo.png");
+  background-size: 100% 110%;
 }
 
 .container{

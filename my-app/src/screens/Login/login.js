@@ -18,7 +18,22 @@ class Login extends React.Component {
   }
 
   goHome() {
-    
+    // to send info to the server, we need to make a post.
+    // control of data with ifs.
+    window.location.href = 'http://localhost:3000/home';
+
+    var BodyString = { method: 'POST',
+    email: this.state.email,
+    pass: this.state.pass,
+  };
+
+    fetch('http://example.com/movies.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(myJson);
+    });
   }
 
   render(){
@@ -38,9 +53,9 @@ class Login extends React.Component {
                   <div class="form-group passInput">
                   <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control passInput" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
-                <button type="submit" class="btn btn-primary loginButton" onClick={this.goHome}>Log in</button>
+                <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Log in</button>
                 <div>
-                  <button type="submit" class="btn btn-primary registerButton ">Sign up</button>
+                  <button type="button" class="btn btn-primary registerButton ">Sign up</button>
                 </div>
                 <div class="plusButtons">
                   <button type="submit" class="btn btn-primary facebookButton ">Facebook</button>
