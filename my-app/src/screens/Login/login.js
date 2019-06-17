@@ -41,10 +41,10 @@ class Login extends React.Component {
     console.log('pass: ', this.state.pass);
     return (
       <div class="main">
-        <div>
-          <img class="imagen" src={require('../../images/picante.png')} />
-        </div>
         <div class="container">
+          <div>
+            <img class="logo" src={require('../../images/logo.png')} />
+          </div>
           <div class="login">
               <form>
                 <div class="form-group emailinput">
@@ -53,13 +53,9 @@ class Login extends React.Component {
                   <div class="form-group passInput">
                   <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control passInput" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
-                <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Log in</button>
+                <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Sign in</button>
                 <div>
                   <button type="button" class="btn btn-primary registerButton ">Sign up</button>
-                </div>
-                <div class="plusButtons">
-                  <button type="submit" class="btn btn-primary facebookButton ">Facebook</button>
-                  <button type="submit" class="btn btn-primary gmailButton ">Gmail</button>
                 </div>
             </form>
           </div>

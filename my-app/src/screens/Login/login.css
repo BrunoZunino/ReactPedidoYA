@@ -1,7 +1,7 @@
 
-.imagen{
-  width: 475px;
-  height: 200px;
+.logo{
+  width: 35vw;
+  height: 25vh;
   margin-top: 20px;
   margin-bottom: -80px;
 }
@@ -11,34 +11,33 @@
 }
 
 .main{
-  text-align: center;
   align-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../images/fondo.png");
-  background-size: 100% 110%;
+  background-image: url("../../images/fondoLogin.jpg");
+  background-size: 40vw 120vh;
 }
 
 .container{
-  width: 500px;
-  height: 500px; 
+  width: 60vw;
+  height: 100vh; 
   background:rgba(255, 255, 255);
   margin-top: 0px;
-  border-radius: 10px; 
-  display: block;
+  display: inline-block;
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin-left: 40%;
 }
 
 .loginButton{
   margin-top: 40px;
-  width: 60%;
+  width: 30%;
   background-color:rgb(114, 232, 135) ;
   border-color:transparent;
   font-size: 22px;
-  border-radius: 8px;
+  border-radius: 20px;
   /* font-family */ 
 }
 
@@ -73,54 +72,40 @@
   transition: 0.5s;
 }
 
-.facebookButton{
-  margin-top: 40px;
-  display: inline;
-  margin-right: 100px;
-  width: 25%;
-  background-color: rgb(30, 151, 214);
-  border-color:transparent;
-  border-radius: 8px;
-  font-size: 20px;
-}
-
-.facebookButton:hover{
-  background-color: rgb(17, 116, 165);
-  border-color:transparent;
-  transition: 1.5s;
-}
-
-.gmailButton{
-  margin-top: 40px;
-  display: inline;
-  width: 25%;
-  background-color: rgb(219, 109, 102);
-  border-color:transparent;
-  border-radius: 8px;
-  font-size: 20px;
-}
-
-.gmailButton:hover{
-  background-color: rgb(216, 62, 54);
-  border-color:transparent;
-  transition: 1.5s;
-}
-
-
 .content-button{
   align-content: center;
 }
 
 .passInput{
-  background-color: rgb(232, 232, 232);
-  border-color:transparent;
-  border-radius: 5px;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
   margin-top: 40px;
 }
 
+.passInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
 .emailInput{
-  background-color: rgb(232, 232, 232);
-  border-color:transparent;
-  border-radius: 5px;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
   margin-top: 40px;
+}
+
+.emailInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
 }
