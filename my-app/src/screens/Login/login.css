@@ -1,9 +1,10 @@
 
 .logo{
-  width: 35vw;
-  height: 25vh;
-  margin-top: 20px;
+  width: 25vw;
+  height: 15vh;
+  margin-top: 30px;
   margin-bottom: -80px;
+  margin-right: 40%;
 }
 
 .login{
@@ -33,43 +34,49 @@
 
 .loginButton{
   margin-top: 40px;
-  width: 30%;
-  background-color:rgb(114, 232, 135) ;
+  width: 20%;
+  background-color:#54BBC3 ;
   border-color:transparent;
   font-size: 22px;
-  border-radius: 20px;
-  /* font-family */ 
+  border-radius: 50px;
+  font-family: sans-serif;
 }
 
 .loginButton:hover{
   transition: 1.5s;
-  background-color:rgb(50, 173, 70) ;
+  background-color:rgb(77, 180, 187);
   border-color:transparent;
 }
 
-.registerButton{
-  margin-top: 40px;
-  width: 60%;
-  background-color:rgb(114, 232, 135) ;
-  border-color:transparent;
-  font-size: 22px;
-  border-radius: 8px;
+.TextRegister{
+  font-size: 40px;
+  font-family: sans-serif;
+  opacity: 0.39;
+  text-align: center;
+  display: inline-block;
+  margin-top: 30px;
 }
 
 .registerButton:hover{
   transition: 1.5s;
-  background-color:rgb(50, 173, 70) ;
+  background-color:rgb(244, 248, 244) ;
   border-color:transparent;
+  color: black;
 }
 
 .registerButton{
-  margin-top: 20px;
-  width: 25%;
-  background-color:rgb(114, 232, 135) ;
+  height: 10vh;
+  width: 22%;
+  background-color:rgb(255, 255, 255) ;
+  color: black;
+  opacity: 0.39;
+  font-weight: bold;
   border-color:transparent;
-  font-size: 22px;
+  font-size: 40px;
   border-radius: 8px;
   transition: 0.5s;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .content-button{
@@ -77,11 +84,15 @@
 }
 
 .passInput{
-  border-bottom-color: black;
+  border-bottom-color: rgb(0, 0, 0, 0.39);
   border-right-color: transparent;
   border-left-color: transparent;
   border-top-color: transparent;
   margin-top: 40px;
+  width: 50vw;
+  margin-left: 4.5%;
+  font-size: 28px;
+  height: 10vh;
 }
 
 .passInput:focus{
@@ -94,11 +105,15 @@
 }
 
 .emailInput{
-  border-bottom-color: black;
+  border-bottom-color: rgb(0, 0, 0, 0.39);
   border-right-color: transparent;
   border-left-color: transparent;
   border-top-color: transparent;
-  margin-top: 40px;
+  margin-top: 80px;
+  width: 50vw;
+  margin-left: 8%;
+  font-size: 28px;
+  height: 10vh;
 }
 
 .emailInput:focus{

@@ -17,23 +17,23 @@ class Login extends React.Component {
     console.log('I was triggered during componentDidMount');
   }
 
-  goHome() {
+  goHome = () => {
     // to send info to the server, we need to make a post.
     // control of data with ifs.
-    window.location.href = 'http://localhost:3000/home';
+    // window.location.href = 'http://localhost:3000/home';
 
-    var BodyString = { method: 'POST',
-    email: this.state.email,
-    pass: this.state.pass,
-  };
+    var BodyString = { 
+      method: 'POST',
+      email: this.state.email,
+      pass: this.state.pass,
+    }
 
-    fetch('http://example.com/movies.json')
-    .then(function(response) {
-      return response.json();
+    fetch('http://google.com')
+    .then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log(error);
     })
-    .then(function(myJson) {
-      console.log(myJson);
-    });
   }
 
   render(){
@@ -55,6 +55,7 @@ class Login extends React.Component {
                 </div>
                 <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Sign in</button>
                 <div>
+                  <a className="TextRegister">Don't have an account yet?</a>
                   <button type="button" class="btn btn-primary registerButton ">Sign up</button>
                 </div>
             </form>
