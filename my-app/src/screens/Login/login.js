@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './login.css';
+import Styles from './login.css';
 import ReactDOMServer from 'react-dom/server';
 import { Redirect } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ class Login extends React.Component {
   goHome = () => {
     // to send info to the server, we need to make a post.
     // control of data with ifs.
-    // window.location.href = 'http://localhost:3000/home';
+    window.location.href = 'http://localhost:3000/home';
 
     var BodyString = { 
       method: 'POST',
@@ -41,7 +41,7 @@ class Login extends React.Component {
     console.log('pass: ', this.state.pass);
     return (
       <div class="main">
-        <div class="container">
+        <div class="containerLogin">
           <div>
             <img class="logo" src={require('../../images/logo.png')} />
           </div>

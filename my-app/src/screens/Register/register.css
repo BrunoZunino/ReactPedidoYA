@@ -1,0 +1,14 @@
+.backgroundRegister{
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerRegister{
+  width: 60vw;
+  height: 80vh; 
+  background:rgba(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
