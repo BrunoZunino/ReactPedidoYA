@@ -42,7 +42,7 @@ class Login extends React.Component {
     return (
       <div class="main">
         <div class="containerLogin">
-          <div>
+          <div className="containerLogo">
             <img class="logo" src={require('../../images/logo.png')} />
           </div>
           <div class="login">

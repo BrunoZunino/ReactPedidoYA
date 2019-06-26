@@ -8,7 +8,9 @@
 }
 
 .login{
+  position: relative;
   padding-top: 30px;
+  height: 85vh;
 }
 
 .main{
@@ -123,4 +125,10 @@
   border-right-color: transparent;
   border-left-color: transparent;
   border-top-color: transparent;
+}
+
+.containerLogo{
+  position: relative;
+  display: block;
+  height: 15vh;
 }
