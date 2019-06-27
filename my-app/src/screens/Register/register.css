@@ -1,5 +1,6 @@
 .backgroundRegister{
-    background-color: red;
+    background-image: url("../../images/fondoRegister.jpg");
+    background-size: 100vw 100vh;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,12 +8,162 @@
     justify-content: center;
 }
 
+.logoRegister{
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .containerRegister{
   /*position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);*/
-  width: 60vw;
-  height: 80vh; 
+  width: 50vw;
+  height: 75vh; 
   background:rgba(255, 255, 255);
 }
+
+.NameRegisterInput{
+  border-bottom-color: rgb(0, 0, 0, 0.39);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  margin-top: 20px;
+  width: 30vw;
+  margin-left: 5%;
+  font-size: 22px;
+  height: 7vh;
+}
+
+.NameRegisterInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.LastNameRegisterInput{
+  border-bottom-color: rgb(0, 0, 0, 0.39);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  margin-top: 10px;
+  width: 30vw;
+  margin-left: 5%;
+  font-size: 22px;
+  height: 7vh;
+}
+
+.LastNameRegisterInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.EmailRegisterInput{
+  border-bottom-color: rgb(0, 0, 0, 0.39);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  margin-top: 10px;
+  width: 30vw;
+  margin-left: 5%;
+  font-size: 22px;
+  height: 7vh;
+}
+
+.EmailRegisterInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.PassRegisterInput{
+  border-bottom-color: rgb(0, 0, 0, 0.39);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  margin-top: 10px;
+  width: 30vw;
+  margin-left: 3%;
+  font-size: 22px;
+  height: 7vh;
+}
+
+.PassRegisterInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.CountryRegisterInput{
+  border-bottom-color: rgb(0, 0, 0, 0.39);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  margin-top: 0px;
+  width: 30vw;
+  margin-left: 5%;
+  font-size: 22px;
+  height: 8vh;
+}
+
+.CountryRegisterInput:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: black;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.CountryRegisterText{
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left: 6%;
+  color: black;
+  opacity: 0.4;
+  font-weight: bold;
+  margin-bottom: auto;
+}
+
+.newAccountButton{
+  margin-top: 20px;
+  width: 20vw;
+  background-color:red;
+  border-color:transparent;
+  font-size: 22px;
+  border-radius: 50px;
+  font-family: sans-serif;
+  display: block;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.termsText{
+  margin-left: 12%;
+  margin-top: 15px;
+}
+
+.checkbox{
+  margin-left: 3%;
+  margin-top: 15px;
+  width: 3vw;
+  height: 3vh;
+  background: linear-gradient(top, #222 0%, #45484d 100%);
+}
+
