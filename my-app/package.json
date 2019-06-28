@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "cors": "^2.8.5",
+    "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-engine": "^4.5.1",

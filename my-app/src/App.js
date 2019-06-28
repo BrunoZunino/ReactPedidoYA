@@ -8,8 +8,8 @@ import Register from './screens/Register/register.js'
 function App() {
   return (
     <Router>
-      <Route path="/login" component={Login} />
-      <Route path="/register" component={Register}/>
+      <Route path="/iniciarSesion" component={Login} />
+      <Route path="/registrarse" component={Register}/>
       <Route path="/home" component={Home} />
     </Router>
   );

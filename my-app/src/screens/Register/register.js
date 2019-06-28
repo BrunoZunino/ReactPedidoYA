@@ -21,7 +21,7 @@ class Register extends React.Component {
     console.log('pass: ', this.state.pass);
     console.log('pais: ', this.state.Country);
     return (
-        <div className="backgroundRegister">
+        <div className="backgroundRegister row">
           <div><img class="logoRegister" src={require('../../images/logoBlanco.png')} /></div>
             <div className="containerRegister">
               <form>
