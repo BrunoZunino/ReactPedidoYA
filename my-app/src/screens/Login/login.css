@@ -2,7 +2,7 @@
 .logo{
   width: 25vw;
   height: 15vh;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: -80px;
   margin-right: 40%;
 }
@@ -18,7 +18,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../images/fondoLogin.jpg");
+  background-image: url("../../images/fondoLogin.jpeg");
   background-size: 40vw 120vh;
 }
 
@@ -36,11 +36,12 @@
 
 .loginButton{
   margin-top: 20px;
-  width: 20vw;
-  background-color:#54BBC3 ;
+  height: 50px;
+  width: 205px;
+  background-color:#E62C28 ;
   border-color:transparent;
   font-size: 22px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-family: sans-serif;
 }
 
@@ -56,7 +57,7 @@
   opacity: 0.39;
   text-align: center;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .registerButton:hover{
@@ -111,7 +112,7 @@
   border-right-color: transparent;
   border-left-color: transparent;
   border-top-color: transparent;
-  margin-top: 30px;
+  margin-top: 70px;
   width: 50vw;
   margin-left: 8%;
   font-size: 28px;
@@ -131,4 +132,16 @@
   position: relative;
   display: block;
   height: 15vh;
+}
+
+.checkbox{
+  margin-left: 3%;
+  margin-top: 15px;
+  width: 3vw;
+  height: 3vh;
+}
+
+.termsText{
+  margin-left: 12%;
+  margin-top: 15px;
 }

@@ -20,7 +20,7 @@ class Login extends React.Component {
   goHome = () => {
     // to send info to the server, we need to make a post.
     // control of data with ifs.
-    window.location.href = 'http://localhost:3000/home';
+    window.location.href = '/home';
 
     var BodyString = { 
       method: 'POST',
@@ -34,6 +34,10 @@ class Login extends React.Component {
     }).catch(error => {
       console.log(error);
     })
+  }
+
+  goRegister = () => {
+    window.location.href = '/register';
   }
 
   render(){
@@ -56,7 +60,7 @@ class Login extends React.Component {
                 <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Sign in</button>
                 <div>
                   <a className="TextRegister">Don't have an account yet?</a>
-                  <button type="button" class="btn btn-primary registerButton ">Sign up</button>
+                  <button type="button" class="btn btn-primary registerButton " onClick={this.goRegister}>Sign up</button>
                 </div>
             </form>
           </div>

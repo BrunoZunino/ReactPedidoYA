@@ -47,6 +47,8 @@ class Home extends React.Component {
           <img class="restaurante5" src={require('../../images/restaurante5.png')} />
           <div className="opinionesHome">
           </div>
+          <div class="card-deck" >
+        </div>
         </div>
       </div>
     );
