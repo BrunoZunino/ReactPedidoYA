@@ -1,6 +1,32 @@
 const express = require('express');
+const { Client } = require("pg");
 const path = require('path');
 const app = express();
+
+// Connection to Postgresql in virtual box server.
+const client = new Client({
+  user: 'postgres',
+  host: '10.1.8.43',
+  database: 'Test',
+  password: 'test1234',
+  port: 5432,
+})
+
+client.connect(err => {
+  if (err) {
+    console.error('connection error', err.stack)
+  } else {
+    console.log('connected')
+  }
+})
+
+app.get('/', (req, res) => {
+  client.query('SELECT * FROM cliente', (err, response) => {
+    console.log(response);
+    res.send(response.rows);
+    client.end()
+  });
+});
 
 app.use(express.static(path.join(__dirname, 'build/index.html')));
 
