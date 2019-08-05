@@ -23,13 +23,28 @@ class Home extends React.Component {
       });    
     }
 
+
   render(){
+
+
+    let list = [
+      "Canelones", "Montevideo", "Maldonado" 
+    ];
+
+    list.forEach(element => {
+      list.push(<option>{element}</option>);
+      return list;
+    });
+
     return (
       <div className="Home">
         <div className="buscadorHome">
           <img class="logoHome" src={require('../../images/logoBlanco.png')} />
           <form className="form">
             <div>
+              <select class="form-control SearchAddresInput" id="exampleFormControlSelect1">
+                {list}
+              </select>
               <input type="search" id="miBusqueda" name="q" className="buscarHome form-control" placeholder="ej: Una direccion o lo que quieras ordenar"/>
               <button className=" btn buscarBotonHome">Buscar</button>
             </div>
