@@ -28,6 +28,9 @@ app.get('/', (req, res) => {
   });
 });
 
+
+// Web server 
+
 app.use(express.static(path.join(__dirname, 'build/index.html')));
 
 app.get('*', (req,res) => {
