@@ -23,7 +23,7 @@ class Login extends React.Component {
     window.location.href = '/home';
 
     var BodyString = { 
-      method: 'POST',
+      method: 'GET',
       email: this.state.email,
       pass: this.state.pass,
     }

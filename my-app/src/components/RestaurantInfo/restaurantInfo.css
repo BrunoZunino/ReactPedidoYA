@@ -1,0 +1,13 @@
+.Box-Component{
+  height: 30vh;
+  width: 60vw;
+  background-color: green;
+  display: inline-block;
+}
+
+.imageComponent{
+  height: 20vh;
+  width: 10vw;
+  background-color: yellow;
+  margin-top: 2%;
+}

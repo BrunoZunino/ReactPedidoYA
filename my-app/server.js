@@ -3,12 +3,12 @@ const { Client } = require("pg");
 const path = require('path');
 const app = express();
 
-// Connection to Postgresql in virtual box server.
+// Connection to Postgresql on server.
 const client = new Client({
   user: 'postgres',
-  host: '10.1.8.43',
-  database: 'Test',
-  password: 'test1234',
+  host: '10.1.2.2',
+  database: 'picante',
+  password: 'password',
   port: 5432,
 })
 

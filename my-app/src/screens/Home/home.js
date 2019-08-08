@@ -3,6 +3,7 @@ import Styles from './home.css';
 import ReactDOMServer from 'react-dom/server';
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
+import Footer from '../../components/Footer/footer.js';
 
 class Home extends React.Component {
   constructor(props){
@@ -62,9 +63,8 @@ class Home extends React.Component {
           <img class="restaurante5" src={require('../../images/restaurante5.png')} />
           <div className="opinionesHome">
           </div>
-          <div class="card-deck" >
         </div>
-        </div>
+        <Footer/>
       </div>
     );
   }
