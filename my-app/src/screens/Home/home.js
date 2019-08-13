@@ -44,7 +44,7 @@ class Home extends React.Component {
           <form className="form">
             <div>
               <select class="form-control SearchAddresInput" id="exampleFormControlSelect1">
-                {list}
+              {list}
               </select>
               <input type="search" id="miBusqueda" name="q" className="buscarHome form-control" placeholder="ej: Una direccion o lo que quieras ordenar"/>
               <button className=" btn buscarBotonHome">Buscar</button>

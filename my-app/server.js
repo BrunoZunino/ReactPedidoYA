@@ -2,6 +2,9 @@ const express = require('express');
 const { Client } = require("pg");
 const path = require('path');
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
 // Connection to Postgresql on server.
 const client = new Client({
@@ -20,11 +23,34 @@ client.connect(err => {
   }
 })
 
-app.get('/', (req, res) => {
+
+app.post('/register', (req, res) => {
+  console.log(req.body);
+  console.log('hey');
+  res.send('ok');
+});
+
+
+// In this section we are getting all the data from the table cliente 
+app.get('/test/cliente', (req, res) => {
   client.query('SELECT * FROM cliente', (err, response) => {
     console.log(response);
     res.send(response.rows);
-    client.end()
+  });
+});
+
+
+app.get('/test/restaurante/:rut', (req, res) => {
+  console.log(req.params.rut)
+  client.query(`SELECT * FROM restaurante where rut=${req.params.rut}`, (err, response) => {
+    res.send(response.rows);
+  });
+});
+
+app.get('/test/', (req, res) => {
+  client.query('SELECT * FROM restaurante', (err, response) => {
+    console.log(response);
+    res.send(response);
   });
 });
 
