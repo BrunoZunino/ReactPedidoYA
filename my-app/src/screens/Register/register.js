@@ -12,26 +12,25 @@ class Register extends React.Component {
       lastName: "",
       email: "",
       pass: "",
-      country:"",
     };
   };
 
   
 
   signUp = () => { 
-    var BodyString = { 
+    console.log(JSON.stringify(this.state));
+    fetch('http://localhost:5000/register/sign_up', {
       method: 'POST',
-      body: this.state,
-    }
+      body: JSON.stringify(this.state) ,
+      headers:{
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type' : 'application/json'
+      }
+    }).then(response => response.json())
+    .then(response => console.log('Success:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error));
 
-    fetch('http://localhost:5000/register', BodyString)
-    .then(response => {
-      console.log(response);
-    }).catch(error => {
-      console.log(error);
-    })
-
-    window.location.href = '/login';
+    // window.location.href = '/login';
   }
 
   render(){
@@ -46,36 +45,38 @@ class Register extends React.Component {
     });
 
 
+    console.log('nombre: ', this.state.name);
+    console.log('apellido: ', this.state.lastName);
     console.log('email: ', this.state.email);
     console.log('pass: ', this.state.pass);
     console.log('pais: ', this.state.Country);
     return (
         <div className="backgroundRegister row">
-          <div><img class="logoRegister" src={require('../../images/logoBlanco.png')} /></div>
+          <div><img className="logoRegister" src={require('../../images/logoBlanco.png')} /></div>
             <div className="containerRegister">
               <form>
-                  <div class="form-group NameRegister">
-                    <input  value={this.state.name} onChange={(event) => {this.setState({name: event.target.value});}} type="text" class="form-control NameRegisterInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First name"/>
+                  <div className="form-group NameRegister">
+                    <input  value={this.state.name} onChange={(event) => {this.setState({name: event.target.value});}} type="text" className="form-control NameRegisterInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First name"/>
                   </div>
-                  <div class="form-group LastNameRegister">
-                    <input value={this.state.lastName} onChange={(event) => {this.setState({lastName: event.target.value});}} type="text" class="form-control LastNameRegisterInput" id="exampleInputPassword1" placeholder="Last name"/>
+                  <div className="form-group LastNameRegister">
+                    <input value={this.state.lastName} onChange={(event) => {this.setState({lastName: event.target.value});}} type="text" className="form-control LastNameRegisterInput" id="exampleInputPassword1" placeholder="Last name"/>
                   </div>
-                  <div class="form-group EmailRegister">
-                    <input value={this.state.email} onChange={(event) => {this.setState({email: event.target.value});}} type="Email" class="form-control EmailRegisterInput" id="exampleInputPassword1" placeholder="Email"/>
+                  <div className="form-group EmailRegister">
+                    <input value={this.state.email} onChange={(event) => {this.setState({email: event.target.value});}} type="Email" className="form-control EmailRegisterInput" id="exampleInputPassword1" placeholder="Email"/>
                   </div>
-                  <div class="form-group PassRegisterInput">
-                    <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Password"/>
+                  <div className="form-group PassRegisterInput">
+                    <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" className="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Password"/>
                   </div>
-                  <label for="CountryRegister" className="CountryRegisterText">Country</label>
-                  <select class="form-control CountryRegisterInput" id="exampleFormControlSelect1">
+                  <label htmlFor="CountryRegister" className="CountryRegisterText">Country</label>
+                  <select className="form-control CountryRegisterInput" id="exampleFormControlSelect1">
                     {list}
                   </select>
                   <div>
-                    <input class="form-check-input checkbox" type="checkbox" id="gridCheck"></input>
-                    <label className="form-check-label termsText" for="gridCheck">
+                    <input className="form-check-input checkbox" type="checkbox" id="gridCheck"></input>
+                    <label className="form-check-label termsText" htmlFor="gridCheck">
                         I agree with <a>Terms & Conditions</a>
                     </label>
-                    <button type="button" class="btn btn-primary newAccountButton" onClick={this.signUp}>Create new account</button>
+                    <button type="button" className="btn btn-primary newAccountButton" onClick={this.signUp}>Create new account</button>
                 </div>
               </form>
             </div>

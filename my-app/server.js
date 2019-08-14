@@ -2,9 +2,11 @@ const express = require('express');
 const { Client } = require("pg");
 const path = require('path');
 const app = express();
+const cors = require('cors');
 const bodyParser = require('body-parser');
+app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Connection to Postgresql on server.
 const client = new Client({
@@ -24,15 +26,17 @@ client.connect(err => {
 })
 
 
-app.post('/register', (req, res) => {
+app.post('/register/sign_up', (req, res) => {
   console.log(req.body);
-  console.log('hey');
-  res.send('ok');
+  //console.log(req);
+  res.send(req.body);
 });
 
 
 // In this section we are getting all the data from the table cliente 
 app.get('/test/cliente', (req, res) => {
+  console.log('test/cliente');
+  res.send('hola');
   client.query('SELECT * FROM cliente', (err, response) => {
     console.log(response);
     res.send(response.rows);
