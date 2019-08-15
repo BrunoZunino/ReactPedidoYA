@@ -12,6 +12,7 @@ class Register extends React.Component {
       lastName: "",
       email: "",
       pass: "",
+      country: "",
     };
   };
 
@@ -68,7 +69,7 @@ class Register extends React.Component {
                     <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" className="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Password"/>
                   </div>
                   <label htmlFor="CountryRegister" className="CountryRegisterText">Country</label>
-                  <select className="form-control CountryRegisterInput" id="exampleFormControlSelect1">
+                  <select value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1">
                     {list}
                   </select>
                   <div>

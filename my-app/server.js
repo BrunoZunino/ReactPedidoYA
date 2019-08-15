@@ -36,7 +36,6 @@ app.post('/register/sign_up', (req, res) => {
 // In this section we are getting all the data from the table cliente 
 app.get('/test/cliente', (req, res) => {
   console.log('test/cliente');
-  res.send('hola');
   client.query('SELECT * FROM cliente', (err, response) => {
     console.log(response);
     res.send(response.rows);
