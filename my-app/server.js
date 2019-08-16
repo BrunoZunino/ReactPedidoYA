@@ -33,6 +33,7 @@ app.post('/register/sign_up', (req, res) => {
 });
 
 
+
 // In this section we are getting all the data from the table cliente 
 app.get('/test/cliente', (req, res) => {
   console.log('test/cliente');
@@ -56,6 +57,14 @@ app.get('/test/', (req, res) => {
     res.send(response);
   });
 });
+
+app.get('/test/food', (req, res) => {
+  client.query('SELECT * FROM comida', (err, response) => {
+    console.log(response);
+    res.send(response);
+  });
+});
+
 
 
 // Web server 

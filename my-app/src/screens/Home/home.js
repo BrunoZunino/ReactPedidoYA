@@ -64,6 +64,19 @@ class Home extends React.Component {
           <div className="opinionesHome">
           </div>
         </div>
+        <div>
+          <li className="card content_card">
+            <img  src="https://img.pystatic.com/users/burger-2.png" alt="" title=""/>
+            <span className="name">Vicky</span>
+            <div className="content_rating">
+              <span className="rating-points box_split_review_05">5.0</span>
+              <span className="rating rating_50"></span>
+            </div>
+              <p>Exelente como siempre</p>
+            <span className="restaurant_name">Porto Vanila - Ellauri</span>
+            <span className="date">15 ago, 2019</span>
+          </li>
+        </div>
         <Footer/>
       </div>
     );
