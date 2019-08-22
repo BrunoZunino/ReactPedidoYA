@@ -7,19 +7,12 @@ class RestaurantInfo extends React.Component {
     super(props);
     
       this.state={
-        email: "",
-        pass: "",
       };
     };
 
   render() {
 
-    const i = [];
-
-    // i.forEach(element => {
-      
-    // });
-
+    
 
     return (
       <div className="Box-Component">

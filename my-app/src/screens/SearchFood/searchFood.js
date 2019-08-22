@@ -13,6 +13,15 @@ class SearchFood extends React.Component {
     };
 
     render(){
+
+      var request = new Request('http://localhost:5000/restaurant_info', {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'omit',
+        referrerPolicy: 'no-referrer'
+    });
+    console.log(request);
+
       return (
         <div className="mainRestaurant">
           <div className="backgroundImageTop">

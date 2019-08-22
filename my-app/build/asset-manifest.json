@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8071b5e.chunk.css",
-    "main.js": "/static/js/main.3bde7a32.chunk.js",
-    "main.js.map": "/static/js/main.3bde7a32.chunk.js.map",
+    "main.css": "/static/css/main.fbbf94c3.chunk.css",
+    "main.js": "/static/js/main.2e23d088.chunk.js",
+    "main.js.map": "/static/js/main.2e23d088.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.8a0b8ab0.chunk.js": "/static/js/2.8a0b8ab0.chunk.js",
-    "static/js/2.8a0b8ab0.chunk.js.map": "/static/js/2.8a0b8ab0.chunk.js.map",
+    "static/js/2.ee16732a.chunk.js": "/static/js/2.ee16732a.chunk.js",
+    "static/js/2.ee16732a.chunk.js.map": "/static/js/2.ee16732a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3098a8feef6a3af9a00de77a042e9d2b.js": "/precache-manifest.3098a8feef6a3af9a00de77a042e9d2b.js",
+    "precache-manifest.b20b0795d4e7da3cd6aaf32cf40f2a9a.js": "/precache-manifest.b20b0795d4e7da3cd6aaf32cf40f2a9a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b8071b5e.chunk.css.map": "/static/css/main.b8071b5e.chunk.css.map",
-    "static/media/login.css": "/static/media/fondo.ffa8cb21.png",
-    "static/media/picante.png": "/static/media/picante.4c5d899a.png"
+    "static/css/main.fbbf94c3.chunk.css.map": "/static/css/main.fbbf94c3.chunk.css.map",
+    "static/media/searchFood.css": "/static/media/SearchfoodImage.15927f62.png",
+    "static/media/home.css": "/static/media/fondoHome.fcd93451.png",
+    "static/media/login.css": "/static/media/fondoLogin.8b902017.jpeg",
+    "static/media/register.css": "/static/media/fondoRegister.5e19b555.jpg",
+    "static/media/restaurante4.png": "/static/media/restaurante4.a00d3b41.png",
+    "static/media/restaurante5.png": "/static/media/restaurante5.bec2d7df.png"
   }
 }

@@ -51,6 +51,13 @@ app.get('/test/restaurante/:rut', (req, res) => {
   });
 });
 
+app.get('/restaurante_info', (req, res) => {
+  console.log(req.params.rut)
+  client.query('SELECT nombre, imagen, barrio, calle FROM restaurante where', (err, response) => {
+    res.send(response.rows);
+  });
+});
+
 app.get('/test/', (req, res) => {
   client.query('SELECT * FROM restaurante', (err, response) => {
     console.log(response);

@@ -65,7 +65,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div>
-          <li className="card content_card">
+          <li className="card content_card content_img">
             <img  src="https://img.pystatic.com/users/burger-2.png" alt="" title=""/>
             <span className="name">Vicky</span>
             <div className="content_rating">
