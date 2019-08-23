@@ -27,17 +27,16 @@ client.connect(err => {
 
 
 app.post('/register/sign_up', (req, res) => {
-  console.log(req.body);
-  //console.log(req);
-  res.send(req.body);
+  client.query('', (err, response) => {
+    console.log(response);
+    res.send(response.rows);
+  });
 });
 
 
-
-// In this section we are getting all the data from the table cliente 
-app.get('/test/cliente', (req, res) => {
+app.get('/login/sign_in', (req, res) => {
   console.log('test/cliente');
-  client.query('SELECT * FROM cliente', (err, response) => {
+  client.query('SELECT correo, contraseña FROM cliente', (err, response) => {
     console.log(response);
     res.send(response.rows);
   });

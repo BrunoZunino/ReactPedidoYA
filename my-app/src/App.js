@@ -9,10 +9,10 @@ import SearchFood from './screens/SearchFood/searchFood.js';
 function App() {
   return (
     <Router>
-      <Route path="/login" component={Login} />
-      <Route path="/register" component={Register}/>
-      <Route path="/home" component={Home} />
-      <Route path="/restaurant/food" component={SearchFood} />
+      <Route path="/" exact component={Login} />
+      <Route path="/register" exact component={Register}/>
+      <Route path="/home" exact component={Home} />
+      <Route path="/restaurant/food" exact component={SearchFood} />
     </Router>
   );
 }

@@ -20,21 +20,32 @@ class Login extends React.Component {
   goHome = () => {
     // to send info to the server, we need to make a post.
     // control of data with ifs.
-    window.location.href = '/home';
-
     var BodyString = { 
       method: 'GET',
       email: this.state.email,
       pass: this.state.pass,
     }
 
-    fetch('http://google.com')
-    .then(response => {
-      console.log(response);
-    }).catch(error => {
-      console.log(error);
+    fetch('http://localhost:5000/login/sign_in', BodyString)
+      .then(function(response) {
+        console.log('response.body =', response.body);
+        console.log('response.bodyUsed =', response.bodyUsed);
+        console.log('response.headers =', response.headers);
+        console.log('response.ok =', response.ok);
+        console.log('response.status =', response.status);
+        console.log('response.statusText =', response.statusText);
+        console.log('response.type =', response.type);
+        console.log('response.url =', response.url);
+        return response.json();
     })
+    .then(function(data) {
+        console.log('data = ', data);
+    })
+    .catch(function(err) {
+        console.error(err);
+  });
   }
+  
 
   goRegister = () => {
     window.location.href = '/register';
