@@ -31,7 +31,7 @@ class Register extends React.Component {
     .then(response => console.log('Success:', JSON.stringify(response)))
     .catch(error => console.error('Error:', error));
 
-    // window.location.href = '/login';
+    window.location.href = '/';
   }
 
   render(){
@@ -69,7 +69,7 @@ class Register extends React.Component {
                     <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" className="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Password"/>
                   </div>
                   <label htmlFor="CountryRegister" className="CountryRegisterText">Country</label>
-                  <select value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1">
+                  <select value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1" placeholder="Choose one country">
                     {list}
                   </select>
                   <div>

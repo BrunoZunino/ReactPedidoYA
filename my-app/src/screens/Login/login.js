@@ -40,10 +40,18 @@ class Login extends React.Component {
     })
     .then(function(data) {
         console.log('data = ', data);
+        if(data.correo == BodyString.email & data.contraseña == BodyString.pass){
+          window.location.href = '/home';
+        } else {
+          console.log("no son iguales");
+        }
+
     })
     .catch(function(err) {
         console.error(err);
-  });
+    });
+
+    
   }
   
 
