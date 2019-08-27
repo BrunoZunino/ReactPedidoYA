@@ -52,7 +52,7 @@ app.get('/test/restaurante/:rut', (req, res) => {
 
 app.get('/restaurante_info', (req, res) => {
   console.log(req.params.rut)
-  client.query('SELECT nombre, imagen, barrio, calle FROM restaurante where', (err, response) => {
+  client.query('SELECT nombre, imagen, barrio, calle FROM restaurante WHERE', (err, response) => {
     res.send(response.rows);
   });
 });
@@ -64,13 +64,15 @@ app.get('/test/', (req, res) => {
   });
 });
 
-app.get('/test/food', (req, res) => {
-  client.query('SELECT * FROM comida', (err, response) => {
-    console.log(response);
-    res.send(response);
-  });
+app.get('/categories', async (req, res) => {
+  let result = await client.query('SELECT tipo FROM comida');
+  res.send(result.rows);
 });
 
+app.get('/restaurantecomida', async (req, res) => {
+  let result = await client.query('SELECT * FROM restaurantecomida');
+  res.send(result.rows);
+});
 
 
 // Web server 

@@ -45,13 +45,10 @@ class Login extends React.Component {
         } else {
           console.log("no son iguales");
         }
-
     })
     .catch(function(err) {
         console.error(err);
-    });
-
-    
+    });  
   }
   
 

@@ -1,12 +1,9 @@
 .mainRestaurant{
   background-color: white;
-  display: inline-block;
-  width: 100vw;
 }
 
 .backgroundImageTop{
   height: 25vh;
-  display: block;
   background-image: url("../../images/SearchfoodImage.png");
   background-size: 100vw 80vh;
   justify-content: center;
@@ -16,19 +13,13 @@
 .filters{
   background-color: red;
   width: 30vw;
-  display: inline-block;
   height: 100vh;
+  float: left;
 }
 
 .items_filters{
   background-color: blue;
   height: 50vh;
-  width: 15vw;
+  width: 60%;
   margin-left: 40%;
-}
-
-.component{
-  background-color: white;
-  display: inline-block;
-  width: 70vw;
 }

@@ -15,9 +15,11 @@ class RestaurantInfo extends React.Component {
     
 
     return (
-      <div className="Box-Component">
+      <div className="list-restaurant">
         <div className="imageComponent">
           {/* <img class="logo" src={require({this.image})} /> */}
+        </div>
+        <div className="restaurant_name">
         </div>
       </div>
     )

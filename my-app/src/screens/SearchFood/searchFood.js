@@ -10,17 +10,34 @@ class SearchFood extends React.Component {
   constructor(props){
     super(props);
 
+      this.state={
+        categoriesData: null,
+        errorCategoriesData: false,
+      };
     };
+
+    renderCategories(){
+      fetch('http://localhost:5000/categories')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        this.setState({ categoriesData: data });
+        console.log(data);
+      })
+      .catch(function(err) {
+        console.log("error: ", err)
+      });
+      if (!this.state.errorCategoriesData){
+        console.log("ok");
+      } else{
+        console.log("not ok");
+      }
+    }
 
     render(){
 
-      var request = new Request('http://localhost:5000/restaurant_info', {
-        method: 'GET',
-        mode: 'cors',
-        credentials: 'omit',
-        referrerPolicy: 'no-referrer'
-    });
-    console.log(request);
+      
 
       return (
         <div className="mainRestaurant">
@@ -28,12 +45,20 @@ class SearchFood extends React.Component {
           </div>
           <div className="filters">
             <div className="items_filters">
-                <a>hola</a>
+              <ol>
+                <li>filtros</li>
+                <ul>
+                  <li>Pedido express</li>
+                  <li>Cupones</li>
+                </ul>
+                <li>Categorias</li>
+                <ul>
+                  {this.renderCategories()}
+                </ul>
+              </ol>
             </div>
           </div>
-          <div className="component">
           <RestaurantInfo />
-          </div>
           <Footer/>
         </div>
       );
