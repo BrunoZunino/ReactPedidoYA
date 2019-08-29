@@ -19,19 +19,19 @@ class Register extends React.Component {
   
 
   signUp = () => { 
-    console.log(JSON.stringify(this.state));
-    fetch('http://localhost:5000/register/sign_up', {
+    fetch('http://localhost:5000/register/sign_up',{
       method: 'POST',
-      body: JSON.stringify(this.state) ,
-      headers:{
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type' : 'application/json'
-      }
-    }).then(response => response.json())
-    .then(response => console.log('Success:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
-
-    window.location.href = '/';
+      headers: {
+          Accept: 'application/json',
+                  'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state)
+      }).then(response => {
+          console.log(response)
+      })
+      .catch(error =>{
+          console.log(error)
+      })
   }
 
   render(){

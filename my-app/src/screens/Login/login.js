@@ -21,33 +21,38 @@ class Login extends React.Component {
     // to send info to the server, we need to make a post.
     // control of data with ifs.
     var BodyString = { 
-      method: 'GET',
+      method: 'POST',
       email: this.state.email,
       pass: this.state.pass,
     }
 
-    fetch('http://localhost:5000/login/sign_in', BodyString)
-      .then(function(response) {
-        console.log('response.body =', response.body);
-        console.log('response.bodyUsed =', response.bodyUsed);
-        console.log('response.headers =', response.headers);
-        console.log('response.ok =', response.ok);
-        console.log('response.status =', response.status);
-        console.log('response.statusText =', response.statusText);
-        console.log('response.type =', response.type);
-        console.log('response.url =', response.url);
-        return response.json();
-    })
-    .then(function(data) {
-        console.log('data = ', data);
-        if(data.correo == BodyString.email & data.contraseña == BodyString.pass){
+    function handleErrors(response) {
+      if (!response.ok) {
+          throw Error(response.statusText);
+      }
+      return response;
+    }
+
+    fetch('http://localhost:5000/login/sign_in', {
+      method: 'POST',
+      headers: {
+          Accept: 'application/json',
+                  'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state)
+      }).then(handleErrors)
+      .catch(function(err) {
+        console.log(err);
+      }).then(function(data) {
+        console.log(data);
+        if(data){
+          // se logeó el usuario
+          console.log("logeado");
           window.location.href = '/home';
-        } else {
-          console.log("no son iguales");
+        }else{
+          // falló el login
+          console.log("no logeado");
         }
-    })
-    .catch(function(err) {
-        console.error(err);
     });  
   }
   
