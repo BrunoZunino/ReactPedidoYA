@@ -19,8 +19,14 @@ class RestaurantInfo extends React.Component {
         <div className="imageComponent">
           {/* <img class="logo" src={require({this.image})} /> */}
         </div>
-        <div className="restaurant_name">
-        </div>
+        <section className="restaurantInfo">
+          <div className="restaurantName">
+           <a> MC Donalds </a>
+          </div>
+          <div className="restaurantOpenTime">
+           <a>Abre a las </a>
+          </div>
+        </section>
       </div>
     )
   }

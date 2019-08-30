@@ -28,6 +28,7 @@ class Register extends React.Component {
       body: JSON.stringify(this.state)
       }).then(response => {
           console.log(response)
+          window.location.href = '/';
       })
       .catch(error =>{
           console.log(error)

@@ -4,41 +4,35 @@ import ReactDOMServer from 'react-dom/server';
 import { Redirect } from 'react-router-dom';
 import $ from 'jquery';
 import RestaurantInfo from '../../components/RestaurantInfo/restaurantInfo.js';
-import Footer from '../../components/Footer/footer.js'
+import Footer from '../../components/Footer/footer.js';
 
 class SearchFood extends React.Component {
   constructor(props){
     super(props);
 
       this.state={
-        categoriesData: null,
         errorCategoriesData: false,
+        htmlForCategories: "",
       };
     };
 
-    renderCategories(){
-      fetch('http://localhost:5000/categories')
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        this.setState({ categoriesData: data });
-        console.log(data);
-      })
-      .catch(function(err) {
-        console.log("error: ", err)
+    componentDidMount(){
+      this.renderCategories();
+    }
+
+    async renderCategories(){
+
+      let categories = await fetch('http://localhost:5000/categories').then(r => r.json());
+
+      let htmlForCategories = categories.map((cat) => {
+        return <li>{cat.tipo}</li>
       });
-      if (!this.state.errorCategoriesData){
-        console.log("ok");
-      } else{
-        console.log("not ok");
-      }
+
+      this.state.htmlForCategories = htmlForCategories;
+      this.setState(this.state);
     }
 
     render(){
-
-      
-
       return (
         <div className="mainRestaurant">
           <div className="backgroundImageTop">
@@ -46,14 +40,14 @@ class SearchFood extends React.Component {
           <div className="filters">
             <div className="items_filters">
               <ol>
-                <li>filtros</li>
+                <li>Filtros</li>
                 <ul>
                   <li>Pedido express</li>
                   <li>Cupones</li>
                 </ul>
                 <li>Categorias</li>
                 <ul>
-                  {this.renderCategories()}
+                  {this.state.htmlForCategories}
                 </ul>
               </ol>
             </div>

@@ -10,10 +10,30 @@
   height: 20vh;
   width: 10vw;
   background-color: yellow;
-  display: inline-block;
   margin-top: 2%;
+  margin-left: 1%;
+  float: left;
 }
 
-.restaurant_name{
+.restaurantInfo{
+  height: 20vh;
+  width: 50;
   display: inline-block;
+}
+
+.restaurantName{
+  color: #56BABC;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.restaurantOpenTime{
+  color: #BC9D7D;
+  font-weight: bold;
+  font-size: 11px;
+  margin-left: 5px;
+  display:  inline-block;
+  background-color: #FEF3CF;
 }

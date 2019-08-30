@@ -13,13 +13,12 @@
 .filters{
   background-color: red;
   width: 30vw;
-  height: 100vh;
+  min-height: 100vh;
   float: left;
 }
 
 .items_filters{
   background-color: blue;
-  height: 50vh;
   width: 60%;
   margin-left: 40%;
 }
