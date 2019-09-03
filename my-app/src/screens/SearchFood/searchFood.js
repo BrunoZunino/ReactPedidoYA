@@ -13,11 +13,13 @@ class SearchFood extends React.Component {
       this.state={
         errorCategoriesData: false,
         htmlForCategories: "",
+        restaurantInfo: [],
       };
     };
 
     componentDidMount(){
       this.renderCategories();
+      this.renderRestaurants();
     }
 
     async renderCategories(){
@@ -32,12 +34,20 @@ class SearchFood extends React.Component {
       this.setState(this.state);
     }
 
+    async renderRestaurants(){
+      let restaurants = await fetch('http://localhost:5000/restaurant').then(r => r.json());
+
+      this.state.restaurantInfo = restaurants;
+      this.setState(this.state);
+      console.log(this.state.restaurantInfo);
+    }
+
     render(){
       return (
         <div className="mainRestaurant">
           <div className="backgroundImageTop">
           </div>
-          <div className="filters">
+          <div className="content-restaurant">
             <div className="items_filters">
               <ol>
                 <li>Filtros</li>
@@ -51,8 +61,12 @@ class SearchFood extends React.Component {
                 </ul>
               </ol>
             </div>
+            <div>
+              {this.state.restaurantInfo.map(x => {
+                return <RestaurantInfo info={x}/>
+              })}
+            </div>
           </div>
-          <RestaurantInfo />
           <Footer/>
         </div>
       );

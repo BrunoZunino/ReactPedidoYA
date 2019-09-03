@@ -10,15 +10,14 @@
   align-self: center;
 }
 
-.filters{
+.content-restaurant{
   background-color: red;
-  width: 30vw;
+  width: 100%;
   min-height: 100vh;
   float: left;
 }
 
 .items_filters{
   background-color: blue;
-  width: 60%;
-  margin-left: 40%;
+  float: left;
 }
