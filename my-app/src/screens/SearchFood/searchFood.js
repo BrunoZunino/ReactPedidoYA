@@ -27,7 +27,7 @@ class SearchFood extends React.Component {
       let categories = await fetch('http://localhost:5000/categories').then(r => r.json());
 
       let htmlForCategories = categories.map((cat) => {
-        return <li>{cat.tipo}</li>
+        return <li><a>{cat.tipo}</a></li>
       });
 
       this.state.htmlForCategories = htmlForCategories;

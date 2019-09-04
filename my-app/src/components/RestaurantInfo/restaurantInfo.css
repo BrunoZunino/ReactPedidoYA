@@ -2,7 +2,8 @@
   height: 30vh;
   width: 60%;
   margin-top: 2%;
-  background-color: green;
+  background-color:green;
+  border-block-end-color: black;
   float: right;
   margin-right: 30px;
 }
@@ -10,7 +11,6 @@
 .imageComponent{
   height: 25vh;
   width: 15vw;
-  background-color: yellow;
   margin-top: 2%;
   margin-left: 1%;
   float: left;

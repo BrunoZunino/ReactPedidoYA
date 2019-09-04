@@ -19,7 +19,7 @@ class RestaurantInfo extends React.Component {
           <img className="img-restaurant" src={this.props.info.imagen} alt="" />
           :
           <img className="img-restaurant" src={require('../../images/imgNotFound.png')} />
-          } 
+          }
         </div>
         <section className="restaurantInfo">
           <div>

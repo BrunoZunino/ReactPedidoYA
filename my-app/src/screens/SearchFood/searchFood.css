@@ -11,13 +11,15 @@
 }
 
 .content-restaurant{
-  background-color: red;
+  background-color: white;
   width: 100%;
   min-height: 100vh;
   float: left;
 }
 
 .items_filters{
-  background-color: blue;
+  background-color: white;
   float: left;
+  margin-left: 20%;
+  margin-top: 2%;
 }
