@@ -27,7 +27,7 @@ class SearchFood extends React.Component {
       let categories = await fetch('http://localhost:5000/categories').then(r => r.json());
 
       let htmlForCategories = categories.map((cat) => {
-        return <li><a>{cat.tipo}</a></li>
+        return <li className="filters" ><a>{cat.tipo}</a></li>
       });
 
       this.state.htmlForCategories = htmlForCategories;
@@ -50,12 +50,12 @@ class SearchFood extends React.Component {
           <div className="content-restaurant">
             <div className="items_filters">
               <ol>
-                <li>Filtros</li>
+                <li className="filters">Filtros</li>
                 <ul>
-                  <li>Pedido express</li>
-                  <li>Cupones</li>
+                  <li className="filters" >Pedido express</li>
+                  <li className="filters" >Cupones</li>
                 </ul>
-                <li>Categorias</li>
+                <li className="filters" >Categorias</li>
                 <ul>
                   {this.state.htmlForCategories}
                 </ul>
