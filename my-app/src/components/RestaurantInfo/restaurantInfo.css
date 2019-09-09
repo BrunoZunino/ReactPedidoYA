@@ -63,7 +63,8 @@
 }
 
 .restaurantButton{
-  height: 100%;
-  width: 20%;
-  background-color: red;
+  width: 100%;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  padding: .7em .6em;
 }

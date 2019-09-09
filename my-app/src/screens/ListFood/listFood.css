@@ -1,0 +1,11 @@
+.mainFood{
+    background-color: white;
+  }
+  
+  .backgroundImageTop{
+    height: 25vh;
+    background-image: url("../../images/SearchfoodImage.png");
+    background-size: 100vw 80vh;
+    justify-content: center;
+    align-self: center;
+  }

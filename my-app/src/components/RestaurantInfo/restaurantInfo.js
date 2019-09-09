@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './restaurantInfo.css';
+import Food from '../Food/food.js';
 
 
 class RestaurantInfo extends React.Component {
@@ -10,6 +11,10 @@ class RestaurantInfo extends React.Component {
         htmlForRestaurants: "",
       };
     };
+
+    goFood(){
+      window.location.href = '/restaurant/food';
+    }
 
   render() {
     return (
@@ -30,15 +35,13 @@ class RestaurantInfo extends React.Component {
             <a>Abre a las {this.props.info.apertura}</a>
             </div>
             <div className="restaurantAddress">
-            <a>{this.props.info.barrio}</a> | <a>{this.props.info.calle}{this.props.info.numero}</a>
+              <a>{this.props.info.barrio}</a> | <a>{this.props.info.calle}{this.props.info.numero}</a>
             </div>
             <div className="restaurantDescription">
-            <a>{this.props.info.descripcion}</a>
+              <a>{this.props.info.descripcion}</a>
             </div>
             <div className="restaurantButton">
-              <div>
-                <button type="button" class="btn btn-outline-danger">Ver Productos</button>
-              </div>
+              <button type="button" class="btn btn-outline-danger" onClick={this.goFood}>Ver Productos</button>
             </div>
           </div>
         </section>
