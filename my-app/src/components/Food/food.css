@@ -3,11 +3,11 @@
     width: 60%;
     margin-top: 2%;
     background-color:white;
-    float: right;
     margin-right: 30px;
     border-bottom-color: black;
     box-shadow: 1px 1px #D3D3D3;
     margin-bottom: 3px;
+    margin-left: 22%;
   }
   
   .imageComponent{

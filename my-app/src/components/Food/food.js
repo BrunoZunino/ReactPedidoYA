@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './food.css';
+import Popup from '../PopUp/popUp.js';
 
 
 class Food extends React.Component {
@@ -8,8 +9,15 @@ class Food extends React.Component {
     
       this.state={
         htmlForRestaurants: "",
+        showPopup: false, 
       };
     };
+
+    togglePopup() {  
+      this.setState({  
+           showPopup: !this.state.showPopup  
+      });  
+       } 
 
   render() {
     return (
@@ -26,11 +34,18 @@ class Food extends React.Component {
             <div className="foodName">
               {this.props.info.nombre}
             </div>
-            <div className="foodName">
+            <div className="foodType">
               {this.props.info.tipo}
             </div>
             <div className="foodButton">
-              <button type="button" class="btn btn-outline-danger">Realizar Pedido</button>
+              <button type="button" class="btn btn-outline-danger" onClick={this.togglePopup.bind(this)} >Realizar Pedido</button>
+              {this.state.showPopup ?  
+                <Popup  
+                  text='Este es un popUp para los ingrdientes y pedido'  
+                  closePopup={this.togglePopup.bind(this)}  
+                />  
+                : null  
+                } 
             </div>
           </div>
         </section>

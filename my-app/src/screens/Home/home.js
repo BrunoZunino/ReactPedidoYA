@@ -25,6 +25,10 @@ class Home extends React.Component {
     }
 
 
+    goRestaurant = () =>{
+      window.location.href = '/restaurant';
+    }
+
   render(){
 
 
@@ -47,7 +51,7 @@ class Home extends React.Component {
               {list}
               </select>
               <input type="search" id="miBusqueda" name="q" className="buscarHome form-control" placeholder="ej: Una direccion o lo que quieras ordenar"/>
-              <button className=" btn buscarBotonHome">Buscar</button>
+              <button type="button" className=" btn buscarBotonHome" onClick={this.goRestaurant}>Buscar</button>
             </div>
           </form>
           <img class="menuHome" src={require('../../images/menu.png')} /><a className="textImagenesHome1">1. Elegí tu comida</a>

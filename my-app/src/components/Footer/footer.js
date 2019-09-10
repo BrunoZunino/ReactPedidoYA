@@ -12,7 +12,6 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="Footer">
-        <a>Hola soy el footer, de momento no tengo nada porque Camila no me diseñó bien :(</a>
       </div>
     )
   }

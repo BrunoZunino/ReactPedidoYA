@@ -88,7 +88,12 @@ app.get('/restaurant', async (req, res) => {
 });
 
 app.get('/food', async (req, res) => {
-  let result = await client.query('SELECT * FROM restaurantecomida');
+  let result = await client.query('SELECT * FROM comida');
+  res.send(result.rows);
+});
+
+app.get('/food/ingredients', async (req, res) => {
+  let result = await client.query('SELECT * FROM ingredientescomida');
   res.send(result.rows);
 });
 

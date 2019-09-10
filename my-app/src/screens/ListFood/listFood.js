@@ -32,7 +32,8 @@ class listFood extends React.Component {
         <div className="mainFood">
           <div className="backgroundImageTop">
           </div>
-            <div>
+            <div className="FoodComponent">
+              <h1 className="foodTitle"> Listado de comidas </h1>
               {this.state.foodInfo.map(x => {
                 return <Food info={x}/>
               })}
