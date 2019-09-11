@@ -16,21 +16,21 @@ class listFood extends React.Component {
     };
 
     componentDidMount(){
-        this.renderFood();
+        this.renderFood(this.props.match.params.id);
       }
 
-    async renderFood(){
-        let food = await fetch('http://localhost:5000/food').then(r => r.json());
+    async renderFood(id){
+        let food = await fetch(`http://localhost:5000/food/${id}`).then(r => r.json());
   
         this.state.foodInfo = food;
         this.setState(this.state);
-        console.log(this.state.foodInfo);
       }
 
     render(){
       return (
         <div className="mainFood">
           <div className="backgroundImageTop">
+            <img className="logo-searchFood" src={require('../../images/logo.png')} />
           </div>
             <div className="FoodComponent">
               <h1 className="foodTitle"> Listado de comidas </h1>

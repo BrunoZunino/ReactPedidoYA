@@ -12,6 +12,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="Footer">
+        <img className="logo-footer" src={require('../../images/logoBlanco.png')} />
       </div>
     )
   }

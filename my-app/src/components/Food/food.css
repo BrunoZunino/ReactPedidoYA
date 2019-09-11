@@ -34,7 +34,7 @@
 
   .foodType{
     color: grey;
-    font-size: 14px;
+    font-size: 18px;
     margin-left: 10px;
     margin-top: 10px;
   }
@@ -51,4 +51,18 @@
     font-size: 1.15rem;
     line-height: 1.1;
     padding: .7em .6em;
+  }
+
+  .foodPrice{
+    color: grey;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .foodTime{
+    color: black;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 10px;
   }

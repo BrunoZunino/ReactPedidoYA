@@ -12,8 +12,8 @@ class RestaurantInfo extends React.Component {
       };
     };
 
-    goFood(){
-      window.location.href = '/restaurant/food';
+    goFood(rut){
+      window.location.href = `/restaurant/food/${rut}`;
     }
 
   render() {
@@ -41,7 +41,7 @@ class RestaurantInfo extends React.Component {
               <a>{this.props.info.descripcion}</a>
             </div>
             <div className="restaurantButton">
-              <button type="button" class="btn btn-outline-danger" onClick={this.goFood}>Ver Productos</button>
+              <button type="button" class="btn btn-outline-danger" onClick={ () => this.goFood(this.props.info.rut)}>Ver Productos</button>
             </div>
           </div>
         </section>

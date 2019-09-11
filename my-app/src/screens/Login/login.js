@@ -73,15 +73,15 @@ class Login extends React.Component {
           <div class="login">
               <form>
                 <div class="form-group emailinput">
-                  <input  value={this.state.email} onChange={(event) => {this.setState({email: event.target.value});}} type="email" class="form-control emailInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"/>
+                  <input  value={this.state.email} onChange={(event) => {this.setState({email: event.target.value});}} type="email" class="form-control emailInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mail"/>
                 </div>
                   <div class="form-group passInput">
-                  <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control passInput" id="exampleInputPassword1" placeholder="Password"/>
+                  <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" class="form-control passInput" id="exampleInputPassword1" placeholder="Contraseña"/>
                 </div>
-                <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Sign in</button>
+                <button type="button" class="btn btn-primary loginButton" onClick={this.goHome}>Entrar</button>
                 <div>
                   <a className="TextRegister">Don't have an account yet?</a>
-                  <button type="button" class="btn btn-primary registerButton " onClick={this.goRegister}>Sign up</button>
+                  <button type="button" class="btn btn-primary registerButton " onClick={this.goRegister}>Registrarse</button>
                 </div>
             </form>
           </div>

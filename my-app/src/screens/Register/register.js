@@ -58,27 +58,27 @@ class Register extends React.Component {
             <div className="containerRegister">
               <form>
                   <div className="form-group NameRegister">
-                    <input  value={this.state.name} onChange={(event) => {this.setState({name: event.target.value});}} type="text" className="form-control NameRegisterInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First name"/>
+                    <input  value={this.state.name} onChange={(event) => {this.setState({name: event.target.value});}} type="text" className="form-control NameRegisterInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre"/>
                   </div>
                   <div className="form-group LastNameRegister">
-                    <input value={this.state.lastName} onChange={(event) => {this.setState({lastName: event.target.value});}} type="text" className="form-control LastNameRegisterInput" id="exampleInputPassword1" placeholder="Last name"/>
+                    <input value={this.state.lastName} onChange={(event) => {this.setState({lastName: event.target.value});}} type="text" className="form-control LastNameRegisterInput" id="exampleInputPassword1" placeholder="Apellido"/>
                   </div>
                   <div className="form-group EmailRegister">
-                    <input value={this.state.email} onChange={(event) => {this.setState({email: event.target.value});}} type="Email" className="form-control EmailRegisterInput" id="exampleInputPassword1" placeholder="Email"/>
+                    <input value={this.state.email} onChange={(event) => {this.setState({email: event.target.value});}} type="Email" className="form-control EmailRegisterInput" id="exampleInputPassword1" placeholder="Mail"/>
                   </div>
                   <div className="form-group PassRegisterInput">
-                    <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" className="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Password"/>
+                    <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" className="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Contraseña"/>
                   </div>
-                  <label htmlFor="CountryRegister" className="CountryRegisterText">Country</label>
-                  <select value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1" placeholder="Choose one country">
+                  <label htmlFor="CountryRegister" className="CountryRegisterText">País</label>
+                  <select value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1" placeholder="Elije un país">
                     {list}
                   </select>
                   <div>
                     <input className="form-check-input checkbox" type="checkbox" id="gridCheck"></input>
                     <label className="form-check-label termsText" htmlFor="gridCheck">
-                        I agree with <a>Terms & Conditions</a>
+                        Acepto<a> Terminos & Condiciones</a>
                     </label>
-                    <button type="button" className="btn btn-primary newAccountButton" onClick={this.signUp}>Create new account</button>
+                    <button type="button" className="btn btn-primary newAccountButton" onClick={this.signUp}>Crear una nueva cuenta</button>
                 </div>
               </form>
             </div>

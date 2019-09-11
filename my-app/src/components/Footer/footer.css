@@ -4,3 +4,11 @@
   background-color: #E62C28;
   clear: both;
 }
+
+.logo-footer{
+  width: 25vw;
+  height: 15vh;
+  margin-top: 50px;
+  margin-bottom: -80px;
+  margin-left: 40%;
+}

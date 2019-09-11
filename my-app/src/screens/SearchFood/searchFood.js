@@ -46,6 +46,7 @@ class SearchFood extends React.Component {
       return (
         <div className="mainRestaurant">
           <div className="backgroundImageTop">
+            <img className="logo-searchFood" src={require('../../images/logo.png')} />
           </div>
           <div className="content-restaurant">
             <div className="items_filters">

@@ -87,20 +87,22 @@ app.get('/restaurant', async (req, res) => {
   res.send(result.rows);
 });
 
-app.get('/food', async (req, res) => {
-  let result = await client.query('SELECT * FROM comida');
+app.get('/food/:id', async (req, res) => {
+  let id = req.params.id;
+  let result = await client.query(`SELECT * FROM restaurantecomida rc inner join comida c on rc.codigo = c.codigo WHERE rc.rut = ${id}`);
   res.send(result.rows);
 });
 
-app.get('/food/ingredients', async (req, res) => {
-  let result = await client.query('SELECT * FROM ingredientescomida');
+app.get('/food/ingredients/:codigo', async (req, res) => {
+  let codigo = req.params.codigo;
+  let result = await client.query(`SELECT * FROM ingredientescomida ic inner join comida c on ic.codigo = c.codigo WHERE ic.codigo = ${codigo}`);
   res.send(result.rows);
 });
 
 app.get('/test/', (req, res) => {
-  client.query('SELECT * FROM restaurante', (err, response) => {
+  client.query('SELECT * FROM ingredientescomida ic inner join comida c on ic.codigo = c.codigo WHERE ic.codigo = 1', (err, response) => {
     console.log(response);
-    res.send(response);
+    res.send(response.rows);
   });
 });
 

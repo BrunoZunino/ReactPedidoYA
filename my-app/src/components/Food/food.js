@@ -9,15 +9,26 @@ class Food extends React.Component {
     
       this.state={
         htmlForRestaurants: "",
-        showPopup: false, 
+        showPopup: false,
+        ingredients: [],
       };
     };
 
-    togglePopup() {  
-      this.setState({  
-           showPopup: !this.state.showPopup  
-      });  
-       } 
+    componentDidMount(){
+    }
+
+    async togglePopup() {  
+      await this.renderIngredients(this.props.info.codigo);
+    } 
+
+    async renderIngredients(codigo){
+      let ingredientes = await fetch(`http://localhost:5000/food/ingredients/${codigo}`).then(r => r.json());
+
+      this.state.ingredients = ingredientes;
+      this.state.showPopup = !this.state.showPopup;
+      console.log("THIS STATE => ",this.state);
+      this.setState(this.state);
+    }
 
   render() {
     return (
@@ -37,11 +48,19 @@ class Food extends React.Component {
             <div className="foodType">
               {this.props.info.tipo}
             </div>
+            <div className="foodPrice">
+              ${this.props.info.precio}
+            </div>
+            <div className="foodTime">
+              {this.props.info.tiempo_preparacion} minutos
+            </div>
             <div className="foodButton">
               <button type="button" class="btn btn-outline-danger" onClick={this.togglePopup.bind(this)} >Realizar Pedido</button>
-              {this.state.showPopup ?  
+              {this.state.showPopup ?
                 <Popup  
-                  text='Este es un popUp para los ingrdientes y pedido'  
+                  text={this.props.info.nombre}
+                  type={this.props.info.tipo}
+                  ingredients={this.state.ingredients}
                   closePopup={this.togglePopup.bind(this)}  
                 />  
                 : null  

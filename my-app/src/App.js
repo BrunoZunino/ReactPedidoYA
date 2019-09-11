@@ -14,7 +14,7 @@ function App() {
       <Route path="/register" exact component={Register}/>
       <Route path="/home" exact component={Home} />
       <Route path="/restaurant" exact component={SearchFood} />
-      <Route path="/restaurant/food" exact component={listFood} />
+      <Route path="/restaurant/food/:id" exact component={listFood} />
     </Router>
   );
 }
