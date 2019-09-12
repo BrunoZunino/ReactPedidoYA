@@ -9,10 +9,13 @@
     "enigma-code": "0.0.11",
     "https": "^1.0.0",
     "jquery": "^3.4.1",
+    "nodemon": "^1.19.2",
     "pg": "^7.12.0",
     "react": "^16.8.6",
+    "react-confirm-alert": "^2.4.1",
     "react-dom": "^16.8.6",
     "react-engine": "^4.5.1",
+    "react-modal": "^3.10.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
@@ -20,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
