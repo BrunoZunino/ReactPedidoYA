@@ -74,10 +74,6 @@ class Register extends React.Component {
                     {list}
                   </select>
                   <div>
-                    <input className="form-check-input checkbox" type="checkbox" id="gridCheck"></input>
-                    <label className="form-check-label termsText" htmlFor="gridCheck">
-                        Acepto<a> Terminos & Condiciones</a>
-                    </label>
                     <button type="button" className="btn btn-primary newAccountButton" onClick={this.signUp}>Crear una nueva cuenta</button>
                 </div>
               </form>

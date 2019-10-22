@@ -34,7 +34,7 @@ class Login extends React.Component {
       return response;
     }
 
-    fetch('http://localhost:5000/login/sign_in', {
+    fetch('http://localhost:5000/clientes/login/sign_in', {
       method: 'POST',
       headers: {
           Accept: 'application/json',
@@ -63,8 +63,6 @@ class Login extends React.Component {
   }
 
   render(){
-    console.log('email: ', this.state.email);
-    console.log('pass: ', this.state.pass);
     return (
       <div class="main">
         <div class="containerLogin">
