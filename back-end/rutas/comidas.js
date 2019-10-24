@@ -16,7 +16,7 @@ router.get('/food/:id', async (req, res) => {
 
 router.get('/food/ingredients/:codigo', async (req, res) => {
   let codigo = req.params.codigo;
-  let result = await client.query(`SELECT * FROM ingredientescomida ic inner join comida c on ic.codigo = c.codigo WHERE ic.codigo = ${codigo}`);
+  result = await Comidas.ingredientesCode(codigo);
   res.send(result.rows);
 });
 

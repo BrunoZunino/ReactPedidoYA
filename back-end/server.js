@@ -12,7 +12,7 @@ const https = require('https');
 
 
 const routerComidas = require('./rutas/comidas');
-const routerRestaurantes = require('./restaurantes');
+const routerRestaurantes = require('./rutas/restaurantes');
 const routerClientes = require('./rutas/clientes');
 
 app.use('/comidas', routerComidas);

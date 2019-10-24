@@ -22,7 +22,7 @@ class Food extends React.Component {
     } 
 
     async renderIngredients(codigo){
-      let ingredientes = await fetch(`http://localhost:5000/food/ingredients/${codigo}`).then(r => r.json());
+      let ingredientes = await fetch(`http://localhost:5000/comidas/food/ingredients/${codigo}`).then(r => r.json());
 
       this.state.ingredients = ingredientes;
       this.state.showPopup = !this.state.showPopup;

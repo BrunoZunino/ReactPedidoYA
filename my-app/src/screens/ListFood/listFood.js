@@ -20,7 +20,7 @@ class listFood extends React.Component {
       }
 
     async renderFood(id){
-        let food = await fetch(`http://localhost:5000/food/${id}`).then(r => r.json());
+        let food = await fetch(`http://localhost:5000/comidas/food/${id}`).then(r => r.json());
   
         this.state.foodInfo = food;
         this.setState(this.state);

@@ -12,14 +12,14 @@ class Register extends React.Component {
       lastName: "",
       email: "",
       pass: "",
-      country: "",
+      country: "Uruguay",
     };
   };
 
   
 
   signUp = () => { 
-    fetch('http://localhost:5000/register/sign_up',{
+    fetch('http://localhost:5000/clientes/register/sign_up',{
       method: 'POST',
       headers: {
           Accept: 'application/json',
@@ -46,11 +46,6 @@ class Register extends React.Component {
       return list;
     });
 
-
-    console.log('nombre: ', this.state.name);
-    console.log('apellido: ', this.state.lastName);
-    console.log('email: ', this.state.email);
-    console.log('pass: ', this.state.pass);
     console.log('pais: ', this.state.Country);
     return (
         <div className="backgroundRegister row">
@@ -70,7 +65,7 @@ class Register extends React.Component {
                     <input value={this.state.pass} onChange={(event) => {this.setState({pass: event.target.value});}} type="password" className="form-control PassRegisterInput" id="exampleInputPassword1" placeholder="Contraseña"/>
                   </div>
                   <label htmlFor="CountryRegister" className="CountryRegisterText">País</label>
-                  <select value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1" placeholder="Elije un país">
+                  <select enabled value={this.state.country} onChange={(event) => {this.setState({country: event.target.value});}} className="form-control CountryRegisterInput" id="exampleFormControlSelect1" placeholder="Elije un país">
                     {list}
                   </select>
                   <div>

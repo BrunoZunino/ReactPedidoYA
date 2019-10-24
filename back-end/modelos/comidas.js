@@ -10,7 +10,13 @@ async function categories() {
   return query;
 };
 
+async function ingredientesCode(codigo) {
+  let query = await client.query(`SELECT * FROM ingredientescomida ic inner join comida c on ic.codigo = c.codigo WHERE ic.codigo = ${codigo}`);
+  return query;
+}
+
 module.exports = {
   getIdFood,
-  categories
+  categories,
+  ingredientesCode
 };

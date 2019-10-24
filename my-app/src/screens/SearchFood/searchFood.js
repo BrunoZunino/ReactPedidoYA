@@ -24,7 +24,7 @@ class SearchFood extends React.Component {
 
     async renderCategories(){
 
-      let categories = await fetch('http://localhost:5000/categories').then(r => r.json());
+      let categories = await fetch('http://localhost:5000/comidas/categories').then(r => r.json());
 
       let htmlForCategories = categories.map((cat) => {
         return <li className="filters" ><a>{cat.tipo}</a></li>
@@ -35,7 +35,7 @@ class SearchFood extends React.Component {
     }
 
     async renderRestaurants(){
-      let restaurants = await fetch('http://localhost:5000/restaurant').then(r => r.json());
+      let restaurants = await fetch('http://localhost:5000/restaurantes/restaurant').then(r => r.json());
 
       this.state.restaurantInfo = restaurants;
       this.setState(this.state);
